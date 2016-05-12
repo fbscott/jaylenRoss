@@ -1,0 +1,23 @@
+// Main tapestry (colored div behind main content)
+
+// mod-specific vars
+$page-title-color				: $text-color;
+$page-title-margin-top	: $tapestry-margin-top; // from _tapestry.scss
+
+#page-title-container {
+	margin-top: remCalc($page-title-margin-top);
+	h1 {
+		color: $page-title-color;
+		text-align: center;
+		span {
+			&:first-of-type {
+		    letter-spacing: 6.5vw;
+		    overflow: hidden;
+			}
+			&:nth-of-type(2) {
+		    letter-spacing: 12.75vw;
+		    overflow: hidden;
+			}
+		}
+	}
+}

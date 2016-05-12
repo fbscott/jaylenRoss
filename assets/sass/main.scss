@@ -1,0 +1,46 @@
+@charset "UTF-8";
+//*************************** Variables and Mixins ***************************
+// @import "foundation/settings";		// Foundation settings
+@import "../../../UI-common/sass/foundation/settings";			// Foundation settings. Remove "../../../UI-common/" from line 58 when not referencing UI-common
+@import "./settings";								// My settings
+@import "../../../UI-common/sass/mixins";
+
+//*************************** Base ***************************
+// @import "./base/reset";
+// @import "./base/base";
+// @import "./base/margin";
+
+//*************************** Layout ***************************
+// @import "./layout/alignments";
+
+//*************************** Foundation ***************************
+@import "../../../UI-common/sass/foundation/components/grid";
+// @import "foundation/components/type";
+// @import "foundation/components/panels";
+// @import "foundation/components/buttons";
+
+//*************************** Fonts ***************************
+// @import "./base/font-family";
+// @import "./base/font-icons";
+
+//*************************** Modules ***************************
+@import "./modules/margin";
+@import "./modules/tapestry";
+@import "./modules/page-title";
+// @import "./modules/text-size";
+@import "./modules/panels";
+// @import "./modules/homePanels";
+// @import "./modules/colorGrid";
+@import "./modules/backgrounds";
+// @import "./modules/typed_js";
+// @import "./modules/fonts";
+// @import "./modules/footer";
+// @import "./modules/comingSoon";
+// @import "./modules/noBama";
+
+//*************************** States ***************************
+// @import "./states/overrides";
+// @import "states/ie";
+// @import "states/print";
+
+//*************************** Themes ***************************

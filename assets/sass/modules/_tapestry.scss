@@ -1,0 +1,13 @@
+// Main tapestry (colored div behind main content)
+
+// mod-specific vars
+$tapestry-bg-color		: $primary-color;
+$tapestry-margin-top	: 80;
+
+#tapestry {
+	position: absolute;
+	height: 100%;
+	background-color: $tapestry-bg-color;
+	margin-top: remCalc($tapestry-margin-top);
+	box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.50);
+}

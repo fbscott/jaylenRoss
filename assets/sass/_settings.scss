@@ -1,0 +1,94 @@
+//*************************** emCalc ***************************
+$browser-context: 16; // Default
+
+// px to em calc
+@function emCalc($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+// px to rem calc
+@function remCalc($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem
+}
+
+// $column-gutter: rem-calc(15) !default;
+
+//*************************** Breakpoints ***************************
+$small-breakpoint:        remCalc(320);
+$medium-breakpoint:       remCalc(642);
+$large-breakpoint:        remCalc(1025);
+
+$small-range:             (0, 40em);
+$medium-range:            (40.063em, remCalc(1023));
+$large-range:             (remCalc(1024), 90em);
+$xlarge-range:            (90.063em, 120em);
+$xxlarge-range:           (120.063em, 99999999em);
+
+//*************************** Colors ***************************
+$black:                   #000000;
+$casper:                  #ffffff;
+$navy:										#2d3e55;
+// $charcoal:                #333333;
+// $grey:                    #4a4a4a;
+// $dryer-lint:              lighten($grey, 52.75%);
+// $see:                     lighten($grey, 50.8%);
+// $sky:                     #3db4e2;
+// $slate:                   #7595A8;
+// $smoke:                   lighten($grey, 65%);
+// $wet-cement:              lighten($grey, 15%);
+$primary-color:							$navy;
+
+//*************************** Element Colors ***************************
+$background-color-primary:$casper;
+
+$text-color:              $casper;
+
+//*************************** Font-Sizes ***************************
+$font-face:               'UbuntuLight';
+$font-weight:             400;
+$font-size:               remCalc(16);
+$font-stack-fallbacks:    Helvetica, Arial, Sans-Serif;
+
+// $font-stack:           $font-face, $font-stack-fallbacks;
+$font-stack:              $font-stack-fallbacks;
+$font-size-start:         9;
+$font-size-end:           32;
+
+$h1-font-size:            remCalc(23);
+$h2-font-size:            remCalc(20);
+$h3-font-size:            remCalc(14);
+$h4-font-size:            remCalc(16);
+$h5-font-size:            remCalc(14);
+$h6-font-size:            remCalc(12);
+$p-font-size:             remCalc(13.5);
+$a-font-size:             remCalc(16);
+$li-font-size:            remCalc(16);
+$default-font-size:       remCalc(16);
+
+$h1-line-height:          remCalc(24);
+$h2-line-height:          remCalc(20);
+$h3-line-height:          remCalc(16);
+$h4-line-height:          remCalc(16);
+$h5-line-height:          remCalc(14);
+$h6-line-height:          remCalc(12);
+$p-line-height:           remCalc(14);
+$a-line-height:           remCalc(14);
+$li-line-height:          remCalc(14);
+$default-line-height:     remCalc(14);
+
+$side-nav-font-size:      remCalc(13);
+
+//*************************** Margin and Padding ***************************
+$h1-margin-top:						remCalc(0);
+$h1-margin-bottom:				remCalc(0);
+$h1-padding-top:					remCalc(0);
+$h1-padding-bottom:				remCalc(0);
+
+//*************************** Modules ***************************
+// Note: module settings should go at the top of each individual module partials.
+
+//*************************** Properties ***************************
+$properties:              margin, padding;
+$sides:                   top, right, bottom, left;
+$sides-gird-overrides:    right left;
+$sizes:										8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
