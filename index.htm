@@ -2,24 +2,48 @@
 	<title>jaylenross.com</title>
 </head>
 <body>
-	<div class="row">
-		<div class="columns">
-			<div class="row">
+<div class="row padding-left-15-on-small padding-right-15-on-small">
+	<div class="columns">
+		<div class="row">
 
-				<div id="tapestry" class="small-8 columns small-offset-2"></div>
+			<div id="tapestry" class="small-8 columns small-offset-2"></div>
 
-			</div>
-			<div class="row">
-				
-				<div id="page-title-container" class="small-8 columns small-offset-2">
-					<h1>
-						<span>Jaylen</span><br>
-						<span>Ross</span>
+		</div>
+		<div class="row">
+			
+			<div id="page-title-container" class="small-8 columns small-offset-2 js-expand-letter-spacing-parent-container">
+				<div>
+					<h1 class="bn-bold">
+						<span class="js-dynamic_letter-spacing text-size-125-on-small" style="display: inline-block;">Jaylen</span><br>
+						<span class="js-dynamic_letter-spacing text-size-125-on-small" style="display: inline-block;">Ross</span>
 					</h1>
 				</div>
-
 			</div>
+
+		</div>
+		<div class="row">
+			
+			<div class="columns panel-author">
+				<div class="row">
+					<div class="small-11 columns small-offset-1 panel-accent"></div>
+					<div class="small-11 columns end panel-text"></div>
+				</div>
+			</div>
+
 		</div>
 	</div>
+</div>
+<!--#include virtual="/assets/inc/coreJS.htm" -->
+<!-- Page-specific JS -->
+<script type="text/javascript" language="javascript" src="/assets/js/dynamicLetterSpacing.js"></script>
+<script>
+	$(document).ready(function() {
+		  dynamicLetterSpacing('js-dynamic_letter-spacing');
+	    
+	    $(window).resize(function() {
+	        dynamicLetterSpacing('js-dynamic_letter-spacing');
+	    });
+	});	
+</script>
 </body>
 </html>

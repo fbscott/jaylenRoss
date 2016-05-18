@@ -1,0 +1,28 @@
+// mod-specific vars
+$text-size-start:				8;
+$text-size-end:					36;
+$text-size-multiplier:	1;
+
+// mixins
+@mixin text-sizes($size) {
+	@for $i from $text-size-start through $text-size-end {
+		// @each $side in $sides {
+			.text-size-#{$i * $text-size-multiplier}-on-#{$size} {
+			  font-size: (rem-calc($i * $text-size-multiplier)) !important;
+			}
+		// }
+	}
+}
+
+// formulae
+// @each $property in $properties {
+	@media #{$small-up} {
+		@include text-sizes(small);
+	}
+	@media #{$medium-up} {
+		@include text-sizes(medium);
+	}
+	@media #{$large-up} {
+		@include text-sizes(large);
+	}
+// }

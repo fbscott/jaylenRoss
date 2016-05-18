@@ -1,0 +1,166 @@
+// Font styles and weights
+// CreightonPro
+// .cr100 {
+//    font-family: 'CreightonProLight', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: normal;
+// }
+// Bebas-Neue
+.bn-thin {
+   font-family: 'bebas-neue-thin', $font-stack-fallbacks;
+   font-weight: 100;
+   font-style: normal;   
+}
+.bn-light {
+   font-family: 'bebas-neue-light', $font-stack-fallbacks;
+   font-weight: 100;
+   font-style: normal;   
+}
+.bn-book {
+   font-family: 'bebas-neue-book', $font-stack-fallbacks;
+   font-weight: 400;
+   font-style: normal;   
+}
+.bn-regular {
+   font-family: 'bebas-neue-regular', $font-stack-fallbacks;
+   font-weight: 400;
+   font-style: normal;   
+}
+.bn-bold {
+   font-family: 'bebas-neue-bold', $font-stack-fallbacks;
+   font-weight: 700;
+   font-style: normal;   
+}
+// Gotham
+// .g100 {
+//    font-family: 'Gotham-XLight', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: normal;
+// }
+// .g100i {
+//    font-family: 'Gotham-XLightIta', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: italic;
+// }
+// .g200 {
+//    font-family: 'Gotham-Light', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: normal;
+// }
+// .g400 {
+//    font-family: 'Gotham-Medium', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: normal;
+// }
+// .g400i {
+//    font-family: 'Gotham-MediumIta', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: italic;
+// }
+// Quicksand
+// .q100 {
+//    font-family: 'Quicksand-Light', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: normal;
+// }
+// .q100i {
+//    font-family: 'Quicksand-LightItalic', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: italic;
+// }
+// .q400 {
+//    font-family: 'Quicksand-Regular', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: normal;
+// }
+// .q400i {
+//    font-family: 'Quicksand-Italic', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: italic;
+// }
+// .q700 {
+//    font-family: 'Quicksand-Bold', $font-stack-fallbacks;
+//    font-weight: 700;
+//    font-style: normal;
+// }
+// .q700i {
+//    font-family: 'Quicksand-BoldItalic', $font-stack-fallbacks;
+//    font-weight: 700;
+//    font-style: italic;
+// }
+// Roboto
+// .r100 {
+//    font-family: 'RobotoLight', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: normal;
+// }
+// .r100i {
+//    font-family: 'RobotoLightItalic', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: italic;
+// }
+// .r400 {
+//    font-family: 'RobotoRegular', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: normal;
+// }
+// .r400i {
+//    font-family: 'RobotoRegularItalic', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: italic;
+// }
+// .r700 {
+//    font-family: 'RobotoBold', $font-stack-fallbacks;
+//    font-weight: 700;
+//    font-style: normal;
+// }
+// .r700i {
+//    font-family: 'RobotoBoldItalic', $font-stack-fallbacks;
+//    font-weight: 700;
+//    font-style: italic;
+// }
+// Ubuntu
+// .u100 {
+//    font-family: 'UbuntuLight', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: normal;
+// }
+// .u100i {
+//    font-family: 'UbuntuLightItalic', $font-stack-fallbacks;
+//    font-weight: 100;
+//    font-style: italic;
+// }
+// .u400 {
+//    font-family: 'UbuntuRegular', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: normal;
+// }
+// .u400i {
+//    font-family: 'UbuntuRegularItalic', $font-stack-fallbacks;
+//    font-weight: normal;
+//    font-style: italic;
+// }
+// .u700 {
+//    font-family: 'UbuntuBold', $font-stack-fallbacks;
+//    font-weight: 700;
+//    font-style: normal;
+// }
+// .u700i {
+//    font-family: 'UbuntuBoldItalic', $font-stack-fallbacks;
+//    font-weight: 700;
+//    font-style: italic;
+// }
+// Font size function
+@for $i from $font-size-start through $font-size-end {
+  .font-size-#{$i} {
+    font-size: remCalc($i) !important;
+  }
+}
+
+@media only screen and (min-width: $large-breakpoint) {
+   @for $i from $font-size-start through $font-size-end {
+     .font-size-#{$i}-on-large {
+       font-size: remCalc($i);
+     }
+   }
+}
