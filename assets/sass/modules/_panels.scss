@@ -4,14 +4,30 @@
 $panel-author-accent-color: #acd3f2;
 $panel-book-1-accent-color: #f8d7a2;
 $panel-text-bg-color: $background-color-primary;
+$panel-border-color: lighten($primary-color, 50%);
 
-$panel-neg-margin: remCalc(-32);
+$panel-neg-margin: remCalc(-212);
 
 %inner-panel {
-	height: remCalc(150);
-	// position: absolute;
-	box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.50);
-	// overflow: hidden;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+
+%inner-content {
+	background-color: $panel-text-bg-color;
+	h2 {
+		top: remCalc(58);
+	}
+	h3 {
+		top: remCalc(10);
+	}
+	p {
+		margin-top: remCalc(132);
+	}
+	span {
+		&.letter-spacing-0 {
+			letter-spacing: 0;
+		}
+	}
 }
 
 .panel-solo {
@@ -19,15 +35,24 @@ $panel-neg-margin: remCalc(-32);
 }
 
 .panel-author {
-	// position: relative;
 	div.panel-accent {
 		@extend %inner-panel;
+		// height: remCalc(150);
 		background-color: $panel-author-accent-color;
+		@include opacity(0.9);
 	}
 	div.panel-text {
 		@extend %inner-panel;
-		background-color: $panel-text-bg-color;
-		margin-top: $panel-neg-margin;
+		@extend %inner-content;
+		// margin-top: $panel-neg-margin;
+	}
+	div.panel-image {
+		@include vertical-align(absolute, 75%, -50%);
+		right: 0;
+		// width: 50%;
+		img {
+			width: 100%;
+		}
 	}
 }
 
@@ -37,4 +62,53 @@ $panel-neg-margin: remCalc(-32);
 
 .panel-book-2 {
 	
+}
+
+.panel-border {
+	border-top: 1px solid $panel-border-color;
+	border-bottom: 1px solid $panel-border-color;
+	line-height: remCalc(44);
+	padding-top: remCalc(4);
+	&:before {
+		content: " ";
+		position: absolute;
+		z-index: -1;
+		top: remCalc(-7);
+		left: remCalc(25);
+		right: remCalc(25);
+		bottom: remCalc(-7);
+		border-top: 1px solid $panel-border-color;
+		border-bottom: 1px solid $panel-border-color;
+	}
+}
+
+@media screen and (min-width: 642px) {
+	.panel-author {
+		div.panel-accent {
+		}
+		div.panel-text {
+		}
+		div.panel-image {
+			@include vertical-align(absolute, 50%, -50%);
+			// width: auto;
+			img {
+				box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.panel-author {
+		div.panel-accent {
+		}
+		div.panel-text {
+		}
+		div.panel-image {
+			width: auto;
+			margin-right: remCalc(-15);
+			img {
+			}
+		}
+	}
 }

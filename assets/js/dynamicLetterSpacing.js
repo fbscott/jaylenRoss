@@ -26,11 +26,11 @@ function dynamicLetterSpacing(el) {
             _spanifiedString                = addSpans(_currentWordOrPhraseContent, _difference);
 
             // console.log(_currentWordOrPhrase);
-            console.log('el width: ' + _currentWordOrPhraseWidth);
-            console.log('el content: ' + _currentWordOrPhraseContent);
+            // console.log('el width: ' + _currentWordOrPhraseWidth);
+            // console.log('el content: ' + _currentWordOrPhraseContent);
             // console.log(_currentWordOrPhraseParent);
-            console.log('parent width: ' + _currentWordOrPhraseParentWidth);
-            console.log('difference: ' + _difference);
+            // console.log('parent width: ' + _currentWordOrPhraseParentWidth);
+            // console.log('difference: ' + _difference);
             // console.log(_spanifiedString);
 
             _currentWordOrPhrase.innerHTML = _spanifiedString;

@@ -28,6 +28,7 @@ $xxlarge-range:           (120.063em, 99999999em);
 $black:                   #000000;
 $casper:                  #ffffff;
 $navy:										#2d3e55;
+$maroon:									#400000;
 // $charcoal:                #333333;
 // $grey:                    #4a4a4a;
 // $dryer-lint:              lighten($grey, 52.75%);
@@ -37,13 +38,20 @@ $navy:										#2d3e55;
 // $smoke:                   lighten($grey, 65%);
 // $wet-cement:              lighten($grey, 15%);
 $primary-color:							$navy;
+$secondary-color:						$maroon;
 
 //*************************** Element Colors ***************************
 $background-color-primary:$casper;
 
 $text-color:              $casper;
 
+$h2-color:								$primary-color;
+$h3-color:								$secondary-color;
+$p-color:									$primary-color;
+
 //*************************** Font-Sizes ***************************
+$font-family-serif:				Georgia, Cambria, "Times New Roman", Times, serif;
+
 $font-face:               'UbuntuLight';
 $font-weight:             400;
 $font-size:               remCalc(16);
@@ -55,12 +63,12 @@ $font-size-start:         9;
 $font-size-end:           32;
 
 $h1-font-size:            remCalc(23);
-$h2-font-size:            remCalc(20);
-$h3-font-size:            remCalc(14);
+$h2-font-size:            remCalc(36);
+$h3-font-size:            remCalc(24);
 $h4-font-size:            remCalc(16);
 $h5-font-size:            remCalc(14);
 $h6-font-size:            remCalc(12);
-$p-font-size:             remCalc(13.5);
+$p-font-size:             remCalc(12);
 $a-font-size:             remCalc(16);
 $li-font-size:            remCalc(16);
 $default-font-size:       remCalc(16);

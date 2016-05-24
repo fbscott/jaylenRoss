@@ -50,11 +50,49 @@ table {
 
 /* line 3, ../sass/base/_base.scss */
 html body {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 16px;
   background-color: white;
   overflow-y: scroll;
+}
+
+/* line 13, ../sass/base/_base.scss */
+h2, h3 {
+  display: inline-block;
+  word-spacing: 0.9375rem;
+  letter-spacing: 1rem;
+  position: absolute;
+}
+
+/* line 27, ../sass/base/_base.scss */
+h2 {
+  font-size: 2.25rem;
+  color: #2d3e55;
+  left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%) scale(0.56667, 1);
+  -ms-transform: translateX(-50%) scale(0.56667, 1);
+  transform: translateX(-50%) scale(0.56667, 1);
+}
+
+/* line 40, ../sass/base/_base.scss */
+h3 {
+  font-size: 1.5rem;
+  color: #400000;
+  left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%) scale(0.56667, 1);
+  -ms-transform: translateX(-50%) scale(0.56667, 1);
+  transform: translateX(-50%) scale(0.56667, 1);
+}
+
+/* line 74, ../sass/base/_base.scss */
+p {
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #2d3e55;
 }
 
 /* line 347, ../../../UI-common/sass/foundation/components/_global.scss */
@@ -4934,6 +4972,8 @@ select {
   text-align: center;
   font-size: 5.5rem;
   line-height: 4.25rem;
+  transform: scale(0.75, 1);
+  text-shadow: 0px 0px 20px black;
 }
 
 @media only screen {
@@ -5374,22 +5414,96 @@ select {
     font-size: 2.25rem !important;
   }
 }
-/* line 10, ../sass/modules/_panels.scss */
+/* line 11, ../sass/modules/_panels.scss */
 .panel-author div.panel-accent, .panel-author div.panel-text {
-  height: 9.375rem;
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 23, ../sass/modules/_panels.scss */
-.panel-author div.panel-accent {
-  background-color: #acd3f2;
-}
-/* line 27, ../sass/modules/_panels.scss */
+/* line 15, ../sass/modules/_panels.scss */
 .panel-author div.panel-text {
   background-color: white;
-  margin-top: -2rem;
+}
+/* line 17, ../sass/modules/_panels.scss */
+.panel-author div.panel-text h2 {
+  top: 3.625rem;
+}
+/* line 20, ../sass/modules/_panels.scss */
+.panel-author div.panel-text h3 {
+  top: 0.625rem;
+}
+/* line 23, ../sass/modules/_panels.scss */
+.panel-author div.panel-text p {
+  margin-top: 8.25rem;
+}
+/* line 27, ../sass/modules/_panels.scss */
+.panel-author div.panel-text span.letter-spacing-0 {
+  letter-spacing: 0;
 }
 
+/* line 38, ../sass/modules/_panels.scss */
+.panel-author div.panel-accent {
+  background-color: #acd3f2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opactiy=90);
+  -khtml-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+/* line 49, ../sass/modules/_panels.scss */
+.panel-author div.panel-image {
+  position: absolute;
+  top: 75%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+/* line 53, ../sass/modules/_panels.scss */
+.panel-author div.panel-image img {
+  width: 100%;
+}
+
+/* line 67, ../sass/modules/_panels.scss */
+.panel-border {
+  border-top: 1px solid #adbed4;
+  border-bottom: 1px solid #adbed4;
+  line-height: 2.75rem;
+  padding-top: 0.25rem;
+}
+/* line 72, ../sass/modules/_panels.scss */
+.panel-border:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: -0.4375rem;
+  left: 1.5625rem;
+  right: 1.5625rem;
+  bottom: -0.4375rem;
+  border-top: 1px solid #adbed4;
+  border-bottom: 1px solid #adbed4;
+}
+
+@media screen and (min-width: 642px) {
+  /* line 91, ../sass/modules/_panels.scss */
+  .panel-author div.panel-image {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  /* line 94, ../sass/modules/_panels.scss */
+  .panel-author div.panel-image img {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 107, ../sass/modules/_panels.scss */
+  .panel-author div.panel-image {
+    width: auto;
+    margin-right: -0.9375rem;
+  }
+}
 /* line 1, ../sass/modules/_backgrounds.scss */
 .bg-black {
   background-color: black;

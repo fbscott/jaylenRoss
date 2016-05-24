@@ -1,7 +1,7 @@
 // Base CSS
 html {
 	body {
-		font-family: $font-family-sans-serif;
+		font-family: $font-family-serif;
 		font-weight: $body-font-weight;
 		font-size: $rem-base;
 		background-color: $background-color-primary;
@@ -10,25 +10,46 @@ html {
 	}
 }
 
+%common-header-styles {
+	display: inline-block;
+  word-spacing: remCalc(15);
+  letter-spacing: remCalc(16);
+	position: absolute;
+}
+
 // h1 {
 // 	font-size: $h1-font-size;
-// 	line-height: $h1-line-height;
-// 	font-weight: bold;
-// 	padding-top: $h1-padding-top;
-// 	padding-bottom: $h1-padding-bottom;
+// 	// line-height: $h1-line-height;
+// 	// font-weight: bold;
+// 	// padding-top: $h1-padding-top;
+// 	// padding-bottom: $h1-padding-bottom;
 // }
-// h2 {
-// 	font-size: $h2-font-size;
-// 	line-height: $h2-line-height;
-// 	font-weight: bold;
-// 	padding-bottom: $h2-padding-bottom;
-// }
-// h3 {
-// 	font-size: $h3-font-size;
-// 	line-height: $h3-line-height;
-// 	font-weight: bold;
-// 	// padding-top: $h3-padding-top;
-// }
+h2 {
+	// line-height: $h2-line-height;
+	// font-weight: bold;
+	// padding-bottom: $h2-padding-bottom;
+	@extend %common-header-styles;
+	font-size: $h2-font-size;
+	color: $h2-color;
+	left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%) scale(0.566667, 1);
+  		-ms-transform: translateX(-50%) scale(0.566667, 1);
+  				transform: translateX(-50%) scale(0.566667, 1);
+}
+h3 {
+	// line-height: $h3-line-height;
+	// font-weight: bold;
+	// padding-top: $h3-padding-top;
+	@extend %common-header-styles;
+	font-size: $h3-font-size;
+	color: $h3-color;
+	left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%) scale(0.566667, 1);
+  		-ms-transform: translateX(-50%) scale(0.566667, 1);
+  				transform: translateX(-50%) scale(0.566667, 1);
+}
 // h4 {
 // 	font-size: $h4-font-size;
 // 	line-height: $h4-line-height;
@@ -50,11 +71,12 @@ html {
 // 	text-decoration: none;
 // 	color: $text-color;
 // }
-// p {
-// 	font-size: $p-font-size;
-// 	line-height: $p-line-height;
-// 	padding-bottom: $p-padding-bottom;
-// }
+p {
+	margin-bottom: remCalc(24);
+	font-size: $p-font-size;
+	font-style: italic;
+	color: $p-color;
+}
 // li {
 // 	font-size: $li-font-size;
 // 	line-height: $li-line-height;

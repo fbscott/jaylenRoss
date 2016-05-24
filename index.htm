@@ -3,7 +3,7 @@
 </head>
 <body>
 <div class="row padding-left-15-on-small padding-right-15-on-small">
-	<div class="columns">
+	<div class="medium-8 columns medium-offset-2">
 		<div class="row">
 
 			<div id="tapestry" class="small-8 columns small-offset-2"></div>
@@ -11,11 +11,11 @@
 		</div>
 		<div class="row">
 			
-			<div id="page-title-container" class="small-8 columns small-offset-2 js-expand-letter-spacing-parent-container">
+			<div id="page-title-container" class="large-8 columns large-offset-2">
 				<div>
 					<h1 class="bn-bold">
-						<span class="js-dynamic_letter-spacing text-size-125-on-small" style="display: inline-block;">Jaylen</span><br>
-						<span class="js-dynamic_letter-spacing text-size-125-on-small" style="display: inline-block;">Ross</span>
+						<span class="js-dynamic_letter-spacing" style="display: inline-block;">Jaylen</span><br>
+						<span class="js-dynamic_letter-spacing" style="display: inline-block;">Ross</span>
 					</h1>
 				</div>
 			</div>
@@ -25,8 +25,32 @@
 			
 			<div class="columns panel-author">
 				<div class="row">
-					<div class="small-11 columns small-offset-1 panel-accent"></div>
-					<div class="small-11 columns end panel-text"></div>
+					<div class="small-11 columns small-offset-1 panel-accent js-panel-accent"></div>
+					<div class="small-11 columns end panel-text js-panel-content">
+						<div class="row">
+
+							<div class="medium-8 columns">
+								<h3 class="bn-bold">About</h3>
+								<h2 class="bn-bold panel-border">Jaylen Ros<span class="letter-spacing-0">s</span></h2>								
+							</div>
+
+						</div>
+						<div class="row">
+
+							<div class="small-8 columns">
+								<div class="row">
+									<div class="small-10 columns small-offset-2">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel tincidunt dolor.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="small-4 columns panel-image">
+								<img src="/assets/img/jaylen-ross-2.jpg" alt="Jaylen Ross">
+							</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -36,12 +60,14 @@
 <!--#include virtual="/assets/inc/coreJS.htm" -->
 <!-- Page-specific JS -->
 <script type="text/javascript" language="javascript" src="/assets/js/dynamicLetterSpacing.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/js/panelHeight.js"></script>
 <script>
 	$(document).ready(function() {
+		  panelHeight('js-panel-accent');
 		  dynamicLetterSpacing('js-dynamic_letter-spacing');
-	    
 	    $(window).resize(function() {
-	        dynamicLetterSpacing('js-dynamic_letter-spacing');
+					panelHeight('js-panel-accent');
+					dynamicLetterSpacing('js-dynamic_letter-spacing');
 	    });
 	});	
 </script>
