@@ -5431,16 +5431,16 @@ select {
 .panel-author div.panel-text h3 {
   top: 0.625rem;
 }
-/* line 23, ../sass/modules/_panels.scss */
-.panel-author div.panel-text p {
+/* line 24, ../sass/modules/_panels.scss */
+.panel-author div.panel-text p:first-of-type {
   margin-top: 8.25rem;
 }
-/* line 27, ../sass/modules/_panels.scss */
+/* line 29, ../sass/modules/_panels.scss */
 .panel-author div.panel-text span.letter-spacing-0 {
   letter-spacing: 0;
 }
 
-/* line 38, ../sass/modules/_panels.scss */
+/* line 40, ../sass/modules/_panels.scss */
 .panel-author div.panel-accent {
   background-color: #acd3f2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
@@ -5449,28 +5449,25 @@ select {
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
-/* line 49, ../sass/modules/_panels.scss */
+/* line 51, ../sass/modules/_panels.scss */
 .panel-author div.panel-image {
-  position: absolute;
-  top: 75%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  margin-top: 8.25rem;
   right: 0;
 }
-/* line 53, ../sass/modules/_panels.scss */
+/* line 56, ../sass/modules/_panels.scss */
 .panel-author div.panel-image img {
   width: 100%;
+  box-shadow: 0px 0px 0.3125rem 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 67, ../sass/modules/_panels.scss */
+/* line 71, ../sass/modules/_panels.scss */
 .panel-border {
   border-top: 1px solid #adbed4;
   border-bottom: 1px solid #adbed4;
   line-height: 2.75rem;
   padding-top: 0.25rem;
 }
-/* line 72, ../sass/modules/_panels.scss */
+/* line 76, ../sass/modules/_panels.scss */
 .panel-border:before {
   content: " ";
   position: absolute;
@@ -5484,21 +5481,22 @@ select {
 }
 
 @media screen and (min-width: 642px) {
-  /* line 91, ../sass/modules/_panels.scss */
+  /* line 95, ../sass/modules/_panels.scss */
   .panel-author div.panel-image {
+    margin-top: initial;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  /* line 94, ../sass/modules/_panels.scss */
+  /* line 99, ../sass/modules/_panels.scss */
   .panel-author div.panel-image img {
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 1.25rem 0px rgba(0, 0, 0, 0.5);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 107, ../sass/modules/_panels.scss */
+  /* line 112, ../sass/modules/_panels.scss */
   .panel-author div.panel-image {
     width: auto;
     margin-right: -0.9375rem;
