@@ -5414,61 +5414,30 @@ select {
     font-size: 2.25rem !important;
   }
 }
-/* line 11, ../sass/modules/_panels.scss */
-.panel-author div.panel-accent, .panel-author div.panel-text {
+/* line 12, ../sass/modules/_panels.scss */
+.panel-author div.panel-accent, .panel-author div.panel-text, .panel-book-1 div.panel-accent, .panel-book-1 div.panel-text, .panel-book-2 div.panel-accent, .panel-book-2 div.panel-text {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  margin-top: 9.375rem;
 }
-
 /* line 15, ../sass/modules/_panels.scss */
-.panel-author div.panel-text {
-  background-color: white;
+.panel-author div.panel-accent div.panel-image, .panel-author div.panel-text div.panel-image, .panel-book-1 div.panel-accent div.panel-image, .panel-book-1 div.panel-text div.panel-image, .panel-book-2 div.panel-accent div.panel-image, .panel-book-2 div.panel-text div.panel-image {
+  position: absolute;
 }
 /* line 17, ../sass/modules/_panels.scss */
-.panel-author div.panel-text h2 {
-  top: 3.625rem;
-}
-/* line 20, ../sass/modules/_panels.scss */
-.panel-author div.panel-text h3 {
-  top: 0.625rem;
-}
-/* line 24, ../sass/modules/_panels.scss */
-.panel-author div.panel-text p:first-of-type {
-  margin-top: 8.25rem;
-}
-/* line 29, ../sass/modules/_panels.scss */
-.panel-author div.panel-text span.letter-spacing-0 {
-  letter-spacing: 0;
-}
-
-/* line 40, ../sass/modules/_panels.scss */
-.panel-author div.panel-accent {
-  background-color: #acd3f2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opactiy=90);
-  -khtml-opacity: 0.9;
-  -moz-opacity: 0.9;
-  opacity: 0.9;
-}
-/* line 51, ../sass/modules/_panels.scss */
-.panel-author div.panel-image {
-  margin-top: 8.25rem;
-  right: 0;
-}
-/* line 56, ../sass/modules/_panels.scss */
-.panel-author div.panel-image img {
+.panel-author div.panel-accent div.panel-image img, .panel-author div.panel-text div.panel-image img, .panel-book-1 div.panel-accent div.panel-image img, .panel-book-1 div.panel-text div.panel-image img, .panel-book-2 div.panel-accent div.panel-image img, .panel-book-2 div.panel-text div.panel-image img {
   width: 100%;
   box-shadow: 0px 0px 0.3125rem 0px rgba(0, 0, 0, 0.5);
 }
 
-/* line 71, ../sass/modules/_panels.scss */
-.panel-border {
+/* line 24, ../sass/modules/_panels.scss */
+.panel-author div.panel-text h2, .panel-book-1 div.panel-text h2, .panel-book-2 div.panel-text h2 {
   border-top: 1px solid #adbed4;
   border-bottom: 1px solid #adbed4;
   line-height: 2.75rem;
   padding-top: 0.25rem;
 }
-/* line 76, ../sass/modules/_panels.scss */
-.panel-border:before {
+/* line 29, ../sass/modules/_panels.scss */
+.panel-author div.panel-text h2:before, .panel-book-1 div.panel-text h2:before, .panel-book-2 div.panel-text h2:before {
   content: " ";
   position: absolute;
   z-index: -1;
@@ -5480,9 +5449,81 @@ select {
   border-bottom: 1px solid #adbed4;
 }
 
+/* line 42, ../sass/modules/_panels.scss */
+.panel-author div.panel-text, .panel-book-1 div.panel-text, .panel-book-2 div.panel-text {
+  background-color: white;
+}
+/* line 44, ../sass/modules/_panels.scss */
+.panel-author div.panel-text h2, .panel-book-1 div.panel-text h2, .panel-book-2 div.panel-text h2 {
+  top: 3.625rem;
+}
+/* line 48, ../sass/modules/_panels.scss */
+.panel-author div.panel-text h3, .panel-book-1 div.panel-text h3, .panel-book-2 div.panel-text h3 {
+  top: 0.625rem;
+}
+/* line 52, ../sass/modules/_panels.scss */
+.panel-author div.panel-text p:first-of-type, .panel-book-1 div.panel-text p:first-of-type, .panel-book-2 div.panel-text p:first-of-type {
+  margin-top: 8.25rem;
+}
+/* line 57, ../sass/modules/_panels.scss */
+.panel-author div.panel-text span.letter-spacing-0, .panel-book-1 div.panel-text span.letter-spacing-0, .panel-book-2 div.panel-text span.letter-spacing-0 {
+  letter-spacing: 0;
+}
+
+/* line 68, ../sass/modules/_panels.scss */
+.panel-author div.panel-accent {
+  background-color: #acd3f2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opactiy=90);
+  -khtml-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+/* line 77, ../sass/modules/_panels.scss */
+.panel-author div.panel-image {
+  margin-top: 8.25rem;
+  right: 0;
+}
+
+/* line 84, ../sass/modules/_panels.scss */
+.panel-book-1 div.panel-accent {
+  background-color: #f8d7a2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opactiy=90);
+  -khtml-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+/* line 93, ../sass/modules/_panels.scss */
+.panel-book-1 div.panel-image {
+  margin-top: 3.5rem;
+  left: 0;
+}
+
+/* line 100, ../sass/modules/_panels.scss */
+.panel-book-2 div.panel-accent {
+  background-color: #7e0000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opactiy=90);
+  -khtml-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+/* line 109, ../sass/modules/_panels.scss */
+.panel-book-2 div.panel-text p:first-of-type {
+  margin-top: 11rem;
+}
+/* line 114, ../sass/modules/_panels.scss */
+.panel-book-2 div.panel-image {
+  margin-top: 11rem;
+  right: 0;
+}
+
 @media screen and (min-width: 642px) {
-  /* line 95, ../sass/modules/_panels.scss */
-  .panel-author div.panel-image {
+  /* line 128, ../sass/modules/_panels.scss */
+  .panel-author div.panel-image,
+  .panel-book-1 div.panel-image,
+  .panel-book-2 div.panel-image {
     margin-top: initial;
     position: absolute;
     top: 50%;
@@ -5490,15 +5531,27 @@ select {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  /* line 99, ../sass/modules/_panels.scss */
-  .panel-author div.panel-image img {
+  /* line 131, ../sass/modules/_panels.scss */
+  .panel-author div.panel-image img,
+  .panel-book-1 div.panel-image img,
+  .panel-book-2 div.panel-image img {
     box-shadow: 0px 0px 1.25rem 0px rgba(0, 0, 0, 0.5);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 112, ../sass/modules/_panels.scss */
+  /* line 151, ../sass/modules/_panels.scss */
   .panel-author div.panel-image {
     width: auto;
+    margin-right: -0.9375rem;
+  }
+
+  /* line 158, ../sass/modules/_panels.scss */
+  .panel-book-1 div.panel-image {
+    margin-left: 1.875rem;
+  }
+
+  /* line 164, ../sass/modules/_panels.scss */
+  .panel-book-2 div.panel-image {
     margin-right: -0.9375rem;
   }
 }

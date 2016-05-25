@@ -3,6 +3,7 @@
 // mod-specific vars
 $panel-author-accent-color: #acd3f2;
 $panel-book-1-accent-color: #f8d7a2;
+$panel-book-2-accent-color: #7e0000;
 $panel-text-bg-color: $background-color-primary;
 $panel-border-color: lighten($primary-color, 50%);
 
@@ -10,12 +11,39 @@ $panel-neg-margin: remCalc(-212);
 
 %inner-panel {
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+	margin-top: remCalc(150);
+	div.panel-image {
+		position: absolute;
+		img {
+			width: 100%;
+			box-shadow: 0px 0px remCalc(5) 0px rgba(0,0,0,0.5);
+		}
+	}
+}
+
+%panel-border {
+	border-top: 1px solid $panel-border-color;
+	border-bottom: 1px solid $panel-border-color;
+	line-height: remCalc(44);
+	padding-top: remCalc(4);
+	&:before {
+		content: " ";
+		position: absolute;
+		z-index: -1;
+		top: remCalc(-7);
+		left: remCalc(25);
+		right: remCalc(25);
+		bottom: remCalc(-7);
+		border-top: 1px solid $panel-border-color;
+		border-bottom: 1px solid $panel-border-color;
+	}
 }
 
 %inner-content {
 	background-color: $panel-text-bg-color;
 	h2 {
 		top: remCalc(58);
+		@extend %panel-border;
 	}
 	h3 {
 		top: remCalc(10);
@@ -38,56 +66,61 @@ $panel-neg-margin: remCalc(-212);
 
 .panel-author {
 	div.panel-accent {
-		@extend %inner-panel;
-		// height: remCalc(150);
 		background-color: $panel-author-accent-color;
+		@extend %inner-panel;
 		@include opacity(0.9);
 	}
 	div.panel-text {
 		@extend %inner-panel;
 		@extend %inner-content;
-		// margin-top: $panel-neg-margin;
 	}
 	div.panel-image {
-		// @include vertical-align(absolute, 75%, -50%);
 		margin-top: remCalc(132);
 		right: 0;
-		// width: 50%;
-		img {
-			width: 100%;
-			box-shadow: 0px 0px remCalc(5) 0px rgba(0,0,0,0.5);
-		}
 	}
 }
 
 .panel-book-1 {
-
+	div.panel-accent {
+		background-color: $panel-book-1-accent-color;
+		@extend %inner-panel;
+		@include opacity(0.9);
+	}
+	div.panel-text {
+		@extend %inner-panel;
+		@extend %inner-content;
+	}
+	div.panel-image {
+		margin-top: remCalc(56);
+		left: 0;
+	}
 }
 
 .panel-book-2 {
-	
-}
-
-.panel-border {
-	border-top: 1px solid $panel-border-color;
-	border-bottom: 1px solid $panel-border-color;
-	line-height: remCalc(44);
-	padding-top: remCalc(4);
-	&:before {
-		content: " ";
-		position: absolute;
-		z-index: -1;
-		top: remCalc(-7);
-		left: remCalc(25);
-		right: remCalc(25);
-		bottom: remCalc(-7);
-		border-top: 1px solid $panel-border-color;
-		border-bottom: 1px solid $panel-border-color;
+	div.panel-accent {
+		background-color: $panel-book-2-accent-color;
+		@extend %inner-panel;
+		@include opacity(0.9);
+	}
+	div.panel-text {
+		@extend %inner-panel;
+		@extend %inner-content;
+		p {
+			&:first-of-type {
+				margin-top: remCalc(176);
+			}
+		}
+	}
+	div.panel-image {
+		margin-top: remCalc(176);
+		right: 0;
 	}
 }
 
 @media screen and (min-width: 642px) {
-	.panel-author {
+	.panel-author,
+	.panel-book-1,
+	.panel-book-2 {
 		div.panel-accent {
 		}
 		div.panel-text {
@@ -95,7 +128,6 @@ $panel-neg-margin: remCalc(-212);
 		div.panel-image {
 			margin-top: initial;
 			@include vertical-align(absolute, 50%, -50%);
-			// width: auto;
 			img {
 				box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5);
 			}
@@ -104,16 +136,33 @@ $panel-neg-margin: remCalc(-212);
 }
 
 @media screen and (min-width: 960px) {
-	.panel-author {
+	%inner-panel {
 		div.panel-accent {
 		}
 		div.panel-text {
 		}
 		div.panel-image {
-			width: auto;
-			margin-right: remCalc(-15);
 			img {
 			}
+		}
+	}
+	.panel-author {
+		@extend %inner-panel;
+		div.panel-image {
+			width: auto;
+			margin-right: remCalc(-15);
+		}
+	}
+	.panel-book-1 {
+		@extend %inner-panel;
+		div.panel-image {
+			margin-left: remCalc(30);
+		}
+	}
+	.panel-book-2 {
+		@extend %inner-panel;
+		div.panel-image {
+			margin-right: remCalc(-15);
 		}
 	}
 }
