@@ -77,6 +77,20 @@ p {
 	font-style: italic;
 	color: $p-color;
 }
+a {
+	&:link {
+	    color: $a-color;
+	}
+	&:visited {
+	    color: $a-color;
+	}
+	&:hover {
+	    color: $a-color;
+	}
+	&:active {
+	    color: $a-color;
+	}
+}
 // li {
 // 	font-size: $li-font-size;
 // 	line-height: $li-line-height;

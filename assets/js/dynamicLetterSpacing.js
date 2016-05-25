@@ -50,13 +50,14 @@ function dynamicLetterSpacing(el) {
     function addSpans(e, s) {
         var _spanArray   = [],
             _concatArray = '',
-            _charString  = e.length;
+            _charString  = e.length,
+            _addPadding  = 30;
 
         charCount = _charString;
 
         for(var i = 0; i < e.length; i++) {
             if(i < e.length - 1) {
-                _spanArray.push('<span style="letter-spacing: ' + s / Number(_charString - 1) + 'px;">' + e[i] + '</span>');
+                _spanArray.push('<span style="letter-spacing: ' + (s + _addPadding) / Number(_charString - 1) + 'px;">' + e[i] + '</span>');
             } else {
                 _spanArray.push('<span>' + e[i] + '</span>');
             }

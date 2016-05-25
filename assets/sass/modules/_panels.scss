@@ -1,6 +1,8 @@
 // Main content panels
 
 // mod-specific vars
+$panel-solo-color: $casper;
+$panel-solo-bg-color: rgba(66, 86, 113, 0.75);
 $panel-author-accent-color: #acd3f2;
 $panel-book-1-accent-color: #f8d7a2;
 $panel-book-2-accent-color: #7e0000;
@@ -43,10 +45,12 @@ $panel-neg-margin: remCalc(-212);
 	background-color: $panel-text-bg-color;
 	h2 {
 		top: remCalc(58);
+		text-align: center;
 		@extend %panel-border;
 	}
 	h3 {
 		top: remCalc(10);
+		text-align: center;
 	}
 	p {
 		&:first-of-type {
@@ -61,7 +65,48 @@ $panel-neg-margin: remCalc(-212);
 }
 
 .panel-solo {
-	
+	@extend %inner-content;
+	background-color: $panel-solo-bg-color;
+	box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5);
+	&:last-of-type {
+		h2 {
+			top: remCalc(24);
+		}
+		p {
+			&:first-of-type{
+				margin-top: remCalc(66);
+			}
+		}
+	}
+	h2, h3 {
+		position: relative;
+		color: $panel-solo-color;
+		left: initial;
+		-webkit-transform: translateX(-20%) scale(0.566667, 1);
+				-ms-transform: translateX(-20%) scale(0.566667, 1);
+						transform: translateX(-20%) scale(0.566667, 1);
+	}
+	h2 {
+		border-top: none;
+		border-bottom: none;
+		&:before {
+			content: " ";
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: remCalc(-15);
+			border-top: none;
+			border-bottom: 1px solid 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+	p {
+		&:first-of-type {
+			margin-top: remCalc(98);
+		}
+		color: $panel-solo-color;
+	}
 }
 
 .panel-author {
@@ -91,7 +136,7 @@ $panel-neg-margin: remCalc(-212);
 		@extend %inner-content;
 	}
 	div.panel-image {
-		margin-top: remCalc(56);
+		margin-top: remCalc(128);
 		left: 0;
 	}
 }
@@ -117,6 +162,14 @@ $panel-neg-margin: remCalc(-212);
 	}
 }
 
+@media screen and (min-width: 460px) {
+	.panel-book-1 {
+		div.panel-image {
+			margin-top: remCalc(56);
+		}
+	}
+}
+
 @media screen and (min-width: 642px) {
 	.panel-author,
 	.panel-book-1,
@@ -129,13 +182,13 @@ $panel-neg-margin: remCalc(-212);
 			margin-top: initial;
 			@include vertical-align(absolute, 50%, -50%);
 			img {
-				box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5);
+				box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5) !important;
 			}
 		}
 	}
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 800px) {
 	%inner-panel {
 		div.panel-accent {
 		}
