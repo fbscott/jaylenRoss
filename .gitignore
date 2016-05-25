@@ -42,3 +42,4 @@ Thumbs.db
 *.scssc
 sftp-config.json
 *_old
+/assets/css
