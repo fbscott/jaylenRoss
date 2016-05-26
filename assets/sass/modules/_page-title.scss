@@ -16,12 +16,13 @@ $page-title-line-height	: remCalc(84);
 	h1 {
 		color: $page-title-color;
 		text-align: center;
+		left: 50%;
 		font-size: $page-title-font-size;
 		line-height: $page-title-line-height;
-		transform: scale(0.75, 1);
+		transform: translateX(-50%) scale(0.75, 1);
 		text-shadow: 0px 0px 20px rgba(0,0,0,1);
     z-index: 10;
-    position: relative;
+    position: absolute;
 		span {
 			&:first-of-type {
 		    // letter-spacing: 6.5vw;

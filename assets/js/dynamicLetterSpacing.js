@@ -4,7 +4,7 @@
  * @param  {Object} el : DOM element passed in from
  *                       index.htm
  */
-function dynamicLetterSpacing(el) {
+function dynamicLetterSpacing(el, parent) {
 
     var arrayOfWordsOrPhrases = [],
         wordOrPhrase          = document.getElementsByClassName(el),
@@ -20,7 +20,7 @@ function dynamicLetterSpacing(el) {
         var _currentWordOrPhrase            = arrayOfWordsOrPhrases[0][i],
             _currentWordOrPhraseWidth       = _currentWordOrPhrase.offsetWidth;
             _currentWordOrPhraseContent     = _currentWordOrPhrase.textContent,
-            _currentWordOrPhraseParent      = _currentWordOrPhrase.offsetParent;
+            _currentWordOrPhraseParent      = document.getElementById(parent);
             _currentWordOrPhraseParentWidth = _currentWordOrPhraseParent.offsetWidth;
             _difference                     = Number(_currentWordOrPhraseParentWidth - _currentWordOrPhraseWidth),
             _spanifiedString                = addSpans(_currentWordOrPhraseContent, _difference);
@@ -28,7 +28,8 @@ function dynamicLetterSpacing(el) {
             // console.log(_currentWordOrPhrase);
             // console.log('el width: ' + _currentWordOrPhraseWidth);
             // console.log('el content: ' + _currentWordOrPhraseContent);
-            // console.log(_currentWordOrPhraseParent);
+            console.log(_currentWordOrPhraseParent);
+            console.log(_currentWordOrPhraseParent.offsetWidth);
             // console.log('parent width: ' + _currentWordOrPhraseParentWidth);
             // console.log('difference: ' + _difference);
             // console.log(_spanifiedString);
@@ -51,7 +52,7 @@ function dynamicLetterSpacing(el) {
         var _spanArray   = [],
             _concatArray = '',
             _charString  = e.length,
-            _addPadding  = 30;
+            _addPadding  = 100;
 
         charCount = _charString;
 

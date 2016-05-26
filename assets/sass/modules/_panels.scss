@@ -66,6 +66,7 @@ $panel-neg-margin: remCalc(-212);
 
 .panel-solo {
 	@extend %inner-content;
+	margin-top: remCalc(160);
 	background-color: $panel-solo-bg-color;
 	box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5);
 	&:last-of-type {
@@ -198,6 +199,9 @@ $panel-neg-margin: remCalc(-212);
 			img {
 			}
 		}
+	}
+	.panel-solo {
+		margin-top: remCalc(275);
 	}
 	.panel-author {
 		@extend %inner-panel;
