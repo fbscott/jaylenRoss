@@ -28,8 +28,8 @@ function dynamicLetterSpacing(el, parent) {
             // console.log(_currentWordOrPhrase);
             // console.log('el width: ' + _currentWordOrPhraseWidth);
             // console.log('el content: ' + _currentWordOrPhraseContent);
-            console.log(_currentWordOrPhraseParent);
-            console.log(_currentWordOrPhraseParent.offsetWidth);
+            // console.log(_currentWordOrPhraseParent);
+            // console.log(_currentWordOrPhraseParent.offsetWidth);
             // console.log('parent width: ' + _currentWordOrPhraseParentWidth);
             // console.log('difference: ' + _difference);
             // console.log(_spanifiedString);
