@@ -1,0 +1,15 @@
+.absolute {
+	position: absolute;
+}
+.fixed {
+	position: fixed;
+}
+.relative {
+	position: relative;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.center-align {
+	@include center-align;
+}

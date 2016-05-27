@@ -29,6 +29,7 @@
 @import "./modules/page-title";
 @import "./modules/text-size";
 @import "./modules/panels";
+@import "./modules/panelAnimations";
 // @import "./modules/homePanels";
 // @import "./modules/colorGrid";
 @import "./modules/backgrounds";
@@ -39,7 +40,7 @@
 // @import "./modules/noBama";
 
 //*************************** States ***************************
-// @import "./states/overrides";
+@import "./states/overrides";
 // @import "states/ie";
 // @import "states/print";
 

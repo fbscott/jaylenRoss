@@ -2,7 +2,7 @@
 	<title>jaylenross.com</title>
 </head>
 <body>
-<div class="row padding-left-15-on-small padding-right-15-on-small">
+<div class="row padding-left-15-on-small padding-right-15-on-small overflow-hidden">
 	<div class="medium-8 columns medium-offset-2">
 		<div class="row">
 
@@ -23,15 +23,15 @@
 		</div>
 		<div class="row">
 
-			<div class="small-10 medium-7 columns small-offset-1 medium-offset-4 panel-solo padding-left-40-on-small padding-right-40-on-small">
+			<div class="small-10 medium-7 columns small-offset-1 medium-offset-4 panel-solo padding-left-40-on-small padding-right-40-on-small animatable fadeInUp">
 				<h2 class="bn-bold">Headin<span class="letter-spacing-0">g</span></h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel tincidunt dolor.</p>
 			</div><!-- /solo panel -->
 			
 			<div class="columns panel-author">
 				<div class="row">
-					<div class="small-11 columns small-offset-1 panel-accent js-panel-accent"></div>
-					<div class="small-11 columns end panel-text js-panel-content">
+					<div class="small-11 columns small-offset-1 panel-accent js-panel-accent animatable bounceInRight"></div>
+					<div class="small-11 columns end panel-text js-panel-content animatable bounceInLeft">
 						<div class="row">
 
 							<div class="medium-8 columns">
@@ -61,8 +61,8 @@
 
 			<div class="columns panel-book-1">
 				<div class="row">
-					<div class="small-11 columns end panel-accent js-panel-accent"></div>
-					<div class="small-11 columns small-offset-1 panel-text js-panel-content">
+					<div class="small-11 columns end panel-accent js-panel-accent animatable bounceInLeft"></div>
+					<div class="small-11 columns small-offset-1 panel-text js-panel-content animatable bounceInRight">
 						<div class="row">
 
 							<div class="medium-8 columns medium-offset-4">
@@ -92,8 +92,8 @@
 
 			<div class="columns panel-book-2">
 				<div class="row">
-					<div class="small-11 columns small-offset-1 panel-accent js-panel-accent"></div>
-					<div class="small-11 columns end panel-text js-panel-content">
+					<div class="small-11 columns small-offset-1 panel-accent js-panel-accent animatable bounceInRight"></div>
+					<div class="small-11 columns end panel-text js-panel-content animatable bounceInLeft">
 						<div class="row">
 
 							<div class="medium-8 columns">
@@ -121,7 +121,7 @@
 				</div>
 			</div><!-- /intelligence panel -->
 
-			<div class="small-10 medium-7 columns small-offset-1 medium-offset-4 panel-solo padding-left-40-on-small padding-right-40-on-small">
+			<div class="small-10 medium-7 columns small-offset-1 medium-offset-4 panel-solo padding-left-40-on-small padding-right-40-on-small end animatable fadeInUp">
 				<h2 class="bn-bold">Contac<span class="letter-spacing-0">t</span></h2>
 				<p>
 					Jaylen would love to hear from you!<br>
@@ -130,6 +130,8 @@
 				</p>
 			</div><!-- /solo panel -->
 
+			<!-- <div class="block animatable fadeInUp">fadeInUp</div> -->
+
 		</div>
 	</div>
 </div>
@@ -137,6 +139,7 @@
 <!-- Page-specific JS -->
 <script type="text/javascript" language="javascript" src="/assets/js/dynamicLetterSpacing.js"></script>
 <script type="text/javascript" language="javascript" src="/assets/js/panelHeight.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/js/panelAnimations.js"></script>
 <script>
 	$(document).ready(function() {
 		  panelHeight('js-panel-accent');
