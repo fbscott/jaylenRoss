@@ -6,8 +6,17 @@ $tapestry-margin-top	: 80;
 
 #tapestry {
 	position: absolute;
-	height: 100%;
-	background-color: $tapestry-bg-color;
+	// Using rems here. Can't use remCalc inside calc function
+	height: calc(100% - 10rem);
+	background: 
+		/* top, transparent red, faked with gradient */ 
+		linear-gradient(
+		rgba(5, 40, 90, 0.5), 
+		rgba(5, 40, 90, 0.5)
+		),
+		/* bottom, image */
+		// url(../img/fresh_snow.png);
+		url(../img/grey_wash_wall.png);
 	margin-top: remCalc($tapestry-margin-top);
 	box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.50);
 }

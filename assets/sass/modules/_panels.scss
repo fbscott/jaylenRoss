@@ -1,6 +1,6 @@
 // Main content panels
 
-// mod-specific vars
+// mod-specific var colors
 $panel-solo-color: $casper;
 $panel-solo-bg-color: rgba(66, 86, 113, 0.75);
 $panel-author-accent-color: #acd3f2;
@@ -9,11 +9,11 @@ $panel-book-2-accent-color: #7e0000;
 $panel-text-bg-color: $background-color-primary;
 $panel-border-color: lighten($primary-color, 50%);
 
-$panel-neg-margin: remCalc(-212);
+// mod-specific var margins
+$panel-margin-top: 150;
 
 %inner-panel {
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
-	margin-top: remCalc(150);
 	div.panel-image {
 		position: absolute;
 		img {
@@ -70,6 +70,8 @@ $panel-neg-margin: remCalc(-212);
 	background-color: $panel-solo-bg-color;
 	box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5);
 	&:last-of-type {
+		margin-top: remCalc($panel-margin-top);
+		margin-bottom: remCalc($panel-margin-top);
 		h2 {
 			top: remCalc(24);
 		}
@@ -112,8 +114,9 @@ $panel-neg-margin: remCalc(-212);
 
 .panel-author {
 	div.panel-accent {
-		background-color: $panel-author-accent-color;
 		@extend %inner-panel;
+		margin-top: remCalc($panel-margin-top + 42);
+		background-color: $panel-author-accent-color;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -128,8 +131,9 @@ $panel-neg-margin: remCalc(-212);
 
 .panel-book-1 {
 	div.panel-accent {
-		background-color: $panel-book-1-accent-color;
 		@extend %inner-panel;
+		margin-top: remCalc($panel-margin-top);
+		background-color: $panel-book-1-accent-color;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -144,8 +148,9 @@ $panel-neg-margin: remCalc(-212);
 
 .panel-book-2 {
 	div.panel-accent {
-		background-color: $panel-book-2-accent-color;
 		@extend %inner-panel;
+		margin-top: remCalc($panel-margin-top + 42);
+		background-color: $panel-book-2-accent-color;
 		@include opacity(0.9);
 	}
 	div.panel-text {
