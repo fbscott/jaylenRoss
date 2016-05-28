@@ -42,7 +42,7 @@
 						<div class="row">
 
 							<div class="medium-8 columns">
-								<h3 class="bn-bold">About</h3>
+								<h3 class="bn-bold">Abou<span class="letter-spacing-0">t</span></h3>
 								<h2 class="bn-bold">Jaylen Ros<span class="letter-spacing-0">s</span></h2>
 							</div>
 
@@ -52,7 +52,7 @@
 							<div class="small-8 columns">
 								<div class="row">
 									<div class="small-10 columns small-offset-1">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel tincidunt dolor.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel tincidunt dolor. <a href="javascript:void(0);" class="js-coming-soon-btn">Derp.</a></p>
 									</div>
 								</div>
 							</div>
@@ -73,7 +73,7 @@
 						<div class="row">
 
 							<div class="medium-8 columns medium-offset-4">
-								<h3 class="bn-bold">Featured Book</h3>
+								<h3 class="bn-bold">Featured Boo<span class="letter-spacing-0">k</span></h3>
 								<h2 class="bn-bold">Olympi<span class="letter-spacing-0">c</span></h2>
 							</div>
 
@@ -104,8 +104,8 @@
 						<div class="row">
 
 							<div class="medium-8 columns">
-								<h3 class="bn-bold">Coming Soon</h3>
-								<h2 class="bn-bold">intelligence &amp;<br>circumstanc<span class="letter-spacing-0">e</span></h2>
+								<h3 class="bn-bold">Coming Soo<span class="letter-spacing-0">n</span></h3>
+								<h2 class="bn-bold">intelligenc<span class="letter-spacing-0">e</span> <span class="letter-spacing-0">&amp;</span><br>circumstanc<span class="letter-spacing-0">e</span></h2>
 							</div>
 
 						</div>
@@ -140,6 +140,27 @@
 		</div>
 	</div>
 </div>
+
+<!-- Coming Soon Modal -->
+<div id="back" class="js-back"></div>
+<div id="coming-soon-modal" class="js-coming-soon-modal">
+	<div class="back-container">
+		<a href="javascript:void(0);" class="text-size-30-on-small js-close">
+			<span class="icon-cancel-circle"></span>
+		</a>
+		<div class="row">
+			<div class="column">
+				<h2 class="margin-top-40-on-small margin-bottom-25-on-small text-center">Coming Soon!</h2>
+				<p>In the spirit of adhering to an iterative (Agile) development and deployment process, my first release consists of this home page.</p>
+				<p>Additional pages are forthcoming and will be deployed during future releases.</p>
+				<p>Check again soon for new updates!</p>
+				<p>Thanks,<br>Scott</p>					
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Coming Soon Modal -->
+
 <script type="text/javascript" language="javascript" src="/assets/js/jQuery_1.11.1/jQuery_1.11.1.min.js"></script>
 <!-- <script type="text/javascript" language="javascript" src="/assets/js/footer.js"></script> -->
 
@@ -147,6 +168,7 @@
 <script type="text/javascript" language="javascript" src="/assets/js/dynamicLetterSpacing.js"></script>
 <script type="text/javascript" language="javascript" src="/assets/js/panelHeight.js"></script>
 <script type="text/javascript" language="javascript" src="/assets/js/panelAnimations.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/js/comingSoonModal.js"></script>
 <script>
 	$(document).ready(function() {
 		  panelHeight('js-panel-accent');
