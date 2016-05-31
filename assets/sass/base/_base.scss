@@ -1,3 +1,39 @@
+// Base defaults
+
+// mod-specific var colors
+$panel-border-color: lighten($primary-color, 50%);
+
+// placeholders
+%common-header-styles {
+	display: inline-block;
+  word-spacing: remCalc(15);
+  letter-spacing: remCalc(16);
+	position: absolute;
+	left: 50%;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%) scale(0.566667, 1);
+  		-ms-transform: translateX(-50%) scale(0.566667, 1);
+  				transform: translateX(-50%) scale(0.566667, 1);
+}
+
+%panel-border {
+	border-top: 1px solid $panel-border-color;
+	border-bottom: 1px solid $panel-border-color;
+	line-height: remCalc(44);
+	padding-top: remCalc(4);
+	&:before {
+		content: " ";
+		position: absolute;
+		z-index: -1;
+		top: remCalc(-7);
+		left: remCalc(25);
+		right: remCalc(25);
+		bottom: remCalc(-7);
+		border-top: 1px solid $panel-border-color;
+		border-bottom: 1px solid $panel-border-color;
+	}
+}
+
 // Base CSS
 html {
 	body {
@@ -8,13 +44,6 @@ html {
 		// background: url(../../assets/img/wave2.jpg);
 		overflow-y: scroll;
 	}
-}
-
-%common-header-styles {
-	display: inline-block;
-  word-spacing: remCalc(15);
-  letter-spacing: remCalc(16);
-	position: absolute;
 }
 
 // h1 {
@@ -29,13 +58,9 @@ h2 {
 	// font-weight: bold;
 	// padding-bottom: $h2-padding-bottom;
 	@extend %common-header-styles;
+	@extend %panel-border;
 	font-size: $h2-font-size;
 	color: $h2-color;
-	left: 50%;
-  white-space: nowrap;
-  -webkit-transform: translateX(-50%) scale(0.566667, 1);
-  		-ms-transform: translateX(-50%) scale(0.566667, 1);
-  				transform: translateX(-50%) scale(0.566667, 1);
 }
 h3 {
 	// line-height: $h3-line-height;
@@ -44,11 +69,6 @@ h3 {
 	@extend %common-header-styles;
 	font-size: $h3-font-size;
 	color: $h3-color;
-	left: 50%;
-  white-space: nowrap;
-  -webkit-transform: translateX(-50%) scale(0.566667, 1);
-  		-ms-transform: translateX(-50%) scale(0.566667, 1);
-  				transform: translateX(-50%) scale(0.566667, 1);
 }
 // h4 {
 // 	font-size: $h4-font-size;
