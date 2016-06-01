@@ -18,6 +18,7 @@
 // @import "foundation/components/type";
 // @import "foundation/components/panels";
 // @import "foundation/components/buttons";
+// @import "../../../UI-common/sass/foundation/components/visibility";
 
 //*************************** Fonts ***************************
 @import "./fonts/font-family";
@@ -37,7 +38,6 @@
 @import "./modules/fonts";
 // @import "./modules/footer";
 @import "./modules/comingSoon";
-// @import "./modules/noBama";
 
 //*************************** States ***************************
 @import "./states/overrides";

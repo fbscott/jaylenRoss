@@ -16,6 +16,7 @@
 	  z-index: 100;
 	  overflow-x: hidden;
 	  overflow-y: scroll;
+	  box-shadow: 0px 0px remCalc(40) 0px rgba(0,0,0,0.5);
 	  &::-webkit-scrollbar {
 	  	display: none;
 	  }
@@ -34,6 +35,7 @@
 	  a {
 	    position: absolute;
 	    display: inline-block;
+	    margin-top: remCalc(2);
 	    margin-right: remCalc(30);
 	    top: 0px;
 	    right: 0px;
@@ -41,6 +43,8 @@
 		  h3 {
 		  	position: relative;
 		  	left: initial;
+		  	visibility: hidden;
+		  	width: 0;
 				-webkit-transform: scale(0.566667, 1);
 						-ms-transform: scale(0.566667, 1);
 								transform: scale(0.566667, 1);
@@ -66,6 +70,12 @@
 			&:first-of-type {
 				margin-top: remCalc(136);
 			}
+		}
+		a {
+		  h3 {
+		  	visibility: visible;
+		  	width: initial;
+		  }
 		}
 		img {
 			float: right;
