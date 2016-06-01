@@ -98,6 +98,7 @@ p {
 	color: $p-color;
 }
 a {
+	text-decoration: none;
 	&:link {
 	    color: $a-color;
 	}
