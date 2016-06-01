@@ -1,11 +1,12 @@
 /* initially hide animatable objects */
 .animatable {
   visibility: hidden;
+
   -webkit-animation-play-state: paused;        
-  -moz-animation-play-state: paused;     
-  -ms-animation-play-state: paused;
-  -o-animation-play-state: paused;   
-  animation-play-state: paused; 
+  	 -moz-animation-play-state: paused;     
+  		-ms-animation-play-state: paused;
+  		 -o-animation-play-state: paused;   
+  				animation-play-state: paused; 
 }
 
 /* show objects being animated */
@@ -13,28 +14,99 @@
   visibility: visible;
   
   -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
+  	 -moz-animation-fill-mode: both;
+  		-ms-animation-fill-mode: both;
+  		 -o-animation-fill-mode: both;
+  				animation-fill-mode: both;
   
   -webkit-animation-duration: 1.25s;
-  -moz-animation-duration: 1.25s;
-  -ms-animation-duration: 1.25s;
-  -o-animation-duration: 1.25s;
-  animation-duration: 1.25s;
-
+  	 -moz-animation-duration: 1.25s;
+  		-ms-animation-duration: 1.25s;
+  		 -o-animation-duration: 1.25s;
+  				animation-duration: 1.25s;
+ 
   -webkit-animation-timing-function: ease-out;
-  -moz-animation-timing-function: ease-out;
-  -ms-animation-timing-function: ease-out;
-  -o-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-
+  	 -moz-animation-timing-function: ease-out;
+  		-ms-animation-timing-function: ease-out;
+  		 -o-animation-timing-function: ease-out;
+  				animation-timing-function: ease-out;
+ 
   -webkit-animation-play-state: running;
-  -moz-animation-play-state: running;
-  -ms-animation-play-state: running;
-  -o-animation-play-state: running;
-  animation-play-state: running;
+  	 -moz-animation-play-state: running;
+  		-ms-animation-play-state: running;
+  		 -o-animation-play-state: running;
+  				animation-play-state: running;
+
+		&.animationDelay {
+			animation-delay: .4s;
+			-webkit-animation-delay: .4s;
+		}
+
+		&.animationDelayMed {
+			animation-delay: 1.2s;
+			-webkit-animation-delay: 1.2s;
+		}
+
+		&.animationDelayLong {
+			animation-delay: 1.6s;
+			-webkit-animation-delay: 1.6s;
+		}
+
+		&.fadeBgColor {
+			-webkit-animation-name: fadeBgColor;
+	 			-moz-animation-name: fadeBgColor;
+					 -o-animation-name: fadeBgColor;
+							animation-name: fadeBgColor;
+		}
+
+		&.bounceIn {
+			-webkit-animation-name: bounceIn;
+				 -moz-animation-name: bounceIn;
+					 -o-animation-name: bounceIn;
+							animation-name: bounceIn;
+		}
+
+		&.bounceInRight {
+			-webkit-animation-name: bounceInRight;
+				 -moz-animation-name: bounceInRight;
+					 -o-animation-name: bounceInRight;
+							animation-name: bounceInRight;
+		}
+
+		&.bounceInLeft {
+			-webkit-animation-name: bounceInLeft;
+				 -moz-animation-name: bounceInLeft;
+					 -o-animation-name: bounceInLeft;
+							animation-name: bounceInLeft;
+		}
+
+		&.fadeIn {
+			-webkit-animation-name: fadeIn;
+				 -moz-animation-name: fadeIn;
+					 -o-animation-name: fadeIn;
+							animation-name: fadeIn;
+		}
+
+		&.fadeInDown {
+			-webkit-animation-name: fadeInDown;
+				 -moz-animation-name: fadeInDown;
+					 -o-animation-name: fadeInDown;
+							animation-name: fadeInDown;
+		}
+
+		&.fadeInUp {
+			-webkit-animation-name: fadeInUp;
+				 -moz-animation-name: fadeInUp;
+					 -o-animation-name: fadeInUp;
+							animation-name: fadeInUp;
+		}
+
+		&.moveUp {
+			-webkit-animation-name: moveUp;
+				 -moz-animation-name: moveUp;
+					 -o-animation-name: moveUp;
+							animation-name: moveUp;
+		}
 }
 
 /* CSS Animations (extracted from http://glifo.uiparade.com/) */
@@ -315,13 +387,13 @@
 @-webkit-keyframes bounceIn {
 	0% {
 		opacity: 0;
-		-webkit-transform: scale(.3);
+		-webkit-transform: scale(0.3);
 	}
 	50% {
 		-webkit-transform: scale(1.05);
 	}
 	70% {
-		-webkit-transform: scale(.9);
+		-webkit-transform: scale(0.9);
 	}
 	100% {
 		opacity: 1;
@@ -332,13 +404,13 @@
 @-moz-keyframes bounceIn {
 	0% {
 		opacity: 0;
-		-moz-transform: scale(.3);
+		-moz-transform: scale(0.3);
 	}
 	50% {
 		-moz-transform: scale(1.05);
 	}
 	70% {
-		-moz-transform: scale(.9);
+		-moz-transform: scale(0.9);
 	}
 	100% {
 		opacity: 1;
@@ -349,13 +421,13 @@
 @-o-keyframes bounceIn {
 	0% {
 		opacity: 0;
-		-o-transform: scale(.3);
+		-o-transform: scale(0.3);
 	}
 	50% {
 		-o-transform: scale(1.05);
 	}
 	70% {
-		-o-transform: scale(.9);
+		-o-transform: scale(0.9);
 	}
 	100% {
 		opacity: 1;
@@ -366,13 +438,13 @@
 @keyframes bounceIn {
 	0% {
 		opacity: 0;
-		transform: scale(.3);
+		transform: scale(0.3);
 	}
 	50% {
 		transform: scale(1.05);
 	}
 	70% {
-		transform: scale(.9);
+		transform: scale(0.9);
 	}
 	100% {
 		opacity: 1;
@@ -457,65 +529,4 @@
 	100%{
 		background:#464646;
 	}
-}
-
-.animated.animationDelay{
-	animation-delay:.4s;
-	-webkit-animation-delay:.4s;
-}
-.animated.animationDelayMed{
-	animation-delay:1.2s;
-	-webkit-animation-delay:1.2s;
-}
-.animated.animationDelayLong{
-	animation-delay:1.6s;
-	-webkit-animation-delay:1.6s;
-}
-.animated.fadeBgColor {
-	-webkit-animation-name: fadeBgColor;
-	-moz-animation-name: fadeBgColor;
-	-o-animation-name: fadeBgColor;
-	animation-name: fadeBgColor;
-}
-.animated.bounceIn {
-	-webkit-animation-name: bounceIn;
-	-moz-animation-name: bounceIn;
-	-o-animation-name: bounceIn;
-	animation-name: bounceIn;
-}
-.animated.bounceInRight {
-	-webkit-animation-name: bounceInRight;
-	-moz-animation-name: bounceInRight;
-	-o-animation-name: bounceInRight;
-	animation-name: bounceInRight;
-}
-.animated.bounceInLeft {
-	-webkit-animation-name: bounceInLeft;
-	-moz-animation-name: bounceInLeft;
-	-o-animation-name: bounceInLeft;
-	animation-name: bounceInLeft;
-}
-.animated.fadeIn {
-	-webkit-animation-name: fadeIn;
-	-moz-animation-name: fadeIn;
-	-o-animation-name: fadeIn;
-	animation-name: fadeIn;
-}
-.animated.fadeInDown {
-	-webkit-animation-name: fadeInDown;
-	-moz-animation-name: fadeInDown;
-	-o-animation-name: fadeInDown;
-	animation-name: fadeInDown;
-}
-.animated.fadeInUp {
-	-webkit-animation-name: fadeInUp;
-	-moz-animation-name: fadeInUp;
-	-o-animation-name: fadeInUp;
-	animation-name: fadeInUp;
-}
-.animated.moveUp {
-	-webkit-animation-name: moveUp;
-	-moz-animation-name: moveUp;
-	-o-animation-name: moveUp;
-	animation-name: moveUp;
 }

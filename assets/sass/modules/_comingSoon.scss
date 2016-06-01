@@ -18,6 +18,9 @@
 	  z-index: 100;
 	  overflow-x: hidden;
 	  overflow-y: scroll;
+	  &::-webkit-scrollbar {
+	  	display: none;
+	  }
 	  @include center-align($position: fixed,
 	                        $orientation: "",
 	                        $top: 50%,
@@ -25,6 +28,9 @@
 	                        $y: -50%,
 	                        $x: -50%);
 	  // @include transition(all 0.5s ease-in-out);
+	  p {
+	  	line-height: remCalc(24);
+	  }
 	  a {
 	    position: absolute;
 	    display: inline-block;

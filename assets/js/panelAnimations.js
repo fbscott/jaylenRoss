@@ -9,20 +9,22 @@ jQuery(function($) {
   var doAnimations = function() {
     
     // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
-        $animatables = $('.animatable');
+    var _offset      = $(window).scrollTop() + $(window).height(),
+        _animatables = $('.animatable');
     
     // Unbind scroll handler if we have no animatables
-    if ($animatables.size() == 0) {
+    if (_animatables.size() === 0) {
       $(window).off('scroll', doAnimations);
     }
     
     // Check all animatables and animate them if necessary
-		$animatables.each(function(i) {
-       var $animatable = $(this);
-			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-        $animatable.removeClass('animatable').addClass('animated');
-			}
+		_animatables.each(function(i) {
+      var _animatable = $(this);
+
+      if ((_animatable.offset().top + _animatable.height() - 20) < _offset) {
+        _animatable.removeClass('animatable')
+                   .addClass('animated');
+      }
     });
 
 	};
