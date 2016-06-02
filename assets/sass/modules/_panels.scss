@@ -24,14 +24,6 @@ $panel-margin-top: 150;
 
 %inner-content {
 	background-color: $panel-text-bg-color;
-	h2 {
-		top: remCalc(58);
-		text-align: center;
-	}
-	h3 {
-		top: remCalc(10);
-		text-align: center;
-	}
 	p {
 		&:first-of-type {
 			margin-top: remCalc(132);
@@ -59,6 +51,9 @@ $panel-margin-top: 150;
 			&:first-of-type{
 				margin-top: remCalc(66);
 			}
+		}
+		a {
+			color: $casper;
 		}
 	}
 	h2, h3 {

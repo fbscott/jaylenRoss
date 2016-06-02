@@ -59,6 +59,8 @@ h2 {
 	// padding-bottom: $h2-padding-bottom;
 	@extend %common-header-styles;
 	@extend %panel-border;
+	top: remCalc(58);
+	text-align: center;
 	font-size: $h2-font-size;
 	color: $h2-color;
 }
@@ -67,6 +69,8 @@ h3 {
 	// font-weight: bold;
 	// padding-top: $h3-padding-top;
 	@extend %common-header-styles;
+	top: remCalc(10);
+	text-align: center;
 	font-size: $h3-font-size;
 	color: $h3-color;
 }
@@ -98,7 +102,7 @@ p {
 	color: $p-color;
 }
 a {
-	text-decoration: none;
+	// text-decoration: none;
 	&:link {
 	    color: $a-color;
 	}
