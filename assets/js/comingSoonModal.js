@@ -4,23 +4,55 @@
 // .js-coming-soon-modal
 
 		// Modal and semi-opaque background
-var comingSoonModalElems 	= [$('.js-back'), $('.js-coming-soon-modal')],
+var modalBack 	 = $('.js-back'),
 		// In-panel coming soon button(s)
-		comingSoonBtn 				= $('.js-coming-soon-btn');
+		modalTrigger = $('.js-modal-trigger'),
+		// revealed modal
+		modal 			 = '',
+		// close link and/or icon
+		modalClose 	 = $('.js-modal-close');
 
 /**
  * Fade modal elems on click
  */
-comingSoonBtn.on('click', function() {
-	comingSoonModalElems.forEach(comingSoonToggle);
+modalTrigger.on('click', function() {
+			// trigger
+	var _this 				= $(this),
+			// trigger data-modal attribute
+			_thisDataAttr = _this.data('trigger');
+
+	revealModal(_thisDataAttr);
+});
+
+modalClose.on('click', function() {
+			// modal and $('.js-back')
+	var _elems = [$(modal), modalBack];
+
+	fadeEachOut(_elems);
 });
 
 /**
- * Fade modal elems on click
+ * Hide/show elems: modal and $('.js-back')
  */
-$('.js-back, .js-close').on('click', function() {
-	comingSoonModalElems.forEach(comingSoonToggle);
-});
+function revealModal(clickedLink) {
+	var _modal = $('.js-' + clickedLink + '-modal')[0],
+			_elems = [$(_modal), modalBack];
+
+	// set modal to revealed elem
+	modal = _modal;
+	fadeEachIn(_elems);
+}
+
+/**
+ * Next two functions fade modal elems in/out: modal and $('.js-back')
+ */
+function fadeEachIn(elems) {
+	elems.forEach(fadeElemsIn);
+}
+
+function fadeEachOut(elems) {
+	elems.forEach(fadeElemsOut);
+}
 
 /**
  * Fade model elements
@@ -28,6 +60,10 @@ $('.js-back, .js-close').on('click', function() {
  * @param  {Number} index: 	array index
  * @param  {Object} array 	
  */
-function comingSoonToggle(elem, index, array) {
-	elem.fadeToggle(150);
+function fadeElemsIn(elem, index, array) {
+	elem.fadeIn(150);
+}
+
+function fadeElemsOut(elem, index, array) {
+	elem.fadeOut(150);
 }
