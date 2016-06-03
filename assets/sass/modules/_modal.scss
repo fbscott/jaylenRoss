@@ -8,7 +8,7 @@
 		background-color: rgba(0,0,0,0.625);
 		z-index: 50;
 	}
-	.coming-soon-modal {
+	.reveal-modal {
 	  display: none;
 		max-height: 80%;
 	  background-color: $casper;
@@ -66,7 +66,7 @@
 }
 
 @media #{$medium-up} {
-	.coming-soon-modal {
+	.reveal-modal {
 		p {
 			&:first-of-type {
 				margin-top: remCalc(136) !important;
@@ -82,6 +82,7 @@
 			float: right;
 			margin-bottom: 0px;
 			padding: 0px 0px remCalc(20) remCalc(40);
+			max-width: remCalc(200);
 		}
 	}
 }
