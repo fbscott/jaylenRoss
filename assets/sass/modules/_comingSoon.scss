@@ -29,7 +29,7 @@
 	  p {
 	  	line-height: remCalc(24);
 			&:first-of-type {
-				margin-top: initial;
+				margin-top: initial !important;
 			}
 	  }
 	  a {
@@ -69,7 +69,7 @@
 	.coming-soon-modal {
 		p {
 			&:first-of-type {
-				margin-top: remCalc(136);
+				margin-top: remCalc(136) !important;
 			}
 		}
 		a {
