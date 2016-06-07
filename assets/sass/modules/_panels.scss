@@ -93,6 +93,7 @@ $panel-margin-top: 150;
 		@extend %inner-panel;
 		margin-top: remCalc($panel-margin-top + 42);
 		background-color: $panel-author-accent-color;
+		z-index: -2;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -110,6 +111,7 @@ $panel-margin-top: 150;
 		@extend %inner-panel;
 		margin-top: remCalc($panel-margin-top);
 		background-color: $panel-book-1-accent-color;
+		z-index: -2;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -127,6 +129,7 @@ $panel-margin-top: 150;
 		@extend %inner-panel;
 		margin-top: remCalc($panel-margin-top + 42);
 		background-color: $panel-book-2-accent-color;
+		z-index: -2;
 		@include opacity(0.9);
 	}
 	div.panel-text {

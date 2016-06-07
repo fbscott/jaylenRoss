@@ -26,6 +26,7 @@ modalTrigger.on('click', function() {
 	revealModal(_thisDataAttr);
 	// Prevent body from scrolling when modal is open
 	body.css('overflow', 'hidden');
+	console.log(_this);
 });
 
 modalClose.on('click', function() {
