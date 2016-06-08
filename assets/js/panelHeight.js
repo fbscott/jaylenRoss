@@ -12,21 +12,32 @@ function panelHeight(accent) {
 
     for (var i = 0; i < accentPanel.length; i++) {
             // find sibling .js-content-panel
-        var contentPanel       = $(accentPanel[i]).closest('.row')
-                                                  .find('.js-panel-content'),
+        var _contentPanel       = $(accentPanel[i]).closest('.row')
+                                                   .find('.js-panel-content'),
             // .js-content-panel height
-            contentPanelHeight = $(contentPanel).height();
+            _contentPanelHeight = $(_contentPanel).height(),
+            // CTA button
+            _ctaButton = $(accentPanel[i]).closest('.js-button-margin-container')
+                                          .find('.js-button-margin'),
+            // CTA button height
+            _ctaButtonHeight = _ctaButton.outerHeight(),
+            // CTA button parent
+            _ctaButtonParent = _ctaButton.closest('div');
 
         // set .js-accent-panel height to tha of .js-content-panel
-        $(accentPanel[i]).height(contentPanelHeight);
+        $(accentPanel[i]).height(_contentPanelHeight);
 
         // alternate positive/negative margin-top
         if(i % 2 === 0) {
             // apply neg margin to .js-contetn-panel
-            $(contentPanel).css('margin-top', -1 * (contentPanelHeight + accentPanelMargin) + 'px');
+            $(_contentPanel).css('margin-top', -1 * (_contentPanelHeight + accentPanelMargin) + 'px');
+            $(_ctaButtonParent).css('margin-top', (_ctaButtonHeight - accentPanelMargin) + 'px');
         } else {
             // apply neg margin to .js-contetn-panel
-            $(contentPanel).css('margin-top', -1 * (contentPanelHeight - accentPanelMargin) + 'px');
+            $(_contentPanel).css('margin-top', -1 * (_contentPanelHeight - accentPanelMargin) + 'px');
         }
+
+        console.log(_ctaButton);
+        console.log(_ctaButtonHeight);
     }
  }

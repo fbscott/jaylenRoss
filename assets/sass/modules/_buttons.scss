@@ -3,10 +3,9 @@
     display: inline-block;
     height: remCalc(70);
     width: remCalc(170);
-    right: remCalc(30);
-    bottom: remCalc(-60);
-    color: $casper;
-    font-size: 1.5em;
+    left: remCalc(80);
+    bottom: 0;
+    text-decoration: none;
     font-weight: bold;
     text-align: center;
     padding: 0.25em 0.5em 0.3em 0.5em;
@@ -17,15 +16,9 @@
     box-shadow: remCalc(0) remCalc(0) remCalc(10) remCalc(2) rgba(0,0,0,0.25);
     background-color: rgba(255,229,0,0.75);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 35%, from(rgba(255, 135, 0, 1)), to(rgba(255, 237, 96, 0.5)));
-    z-index: -1;
-    // a {
-    //     position:absolute;
-    //     display:block;
-    //     left:3.5%;
-    //     top:0px;
-    //     height:50%;
-    //     background-color:rgba(255,255,255,0.25);
-    //     background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.75)), to(rgba(255,255,255,0)));
-    //     background-image:-moz-linear-gradient(top,bottom,from(rgba(255,255,255,0.75)), to(rgba(255,255,255,0)));
-    // }
+    z-index: 10;
+    span {
+        white-space: nowrap;
+        @include center-align;
+    }
 }
