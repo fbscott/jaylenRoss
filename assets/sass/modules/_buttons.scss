@@ -1,22 +1,51 @@
+// Buttons
+
+// mod-specific var colors
+$button-bg-color:       $banana-peel;
+$button-grad-start:     $banana-peel;
+$button-grad-stop:      $orange;
+$button-text-shadow:    $banana-peel;
+$button-border-color:   $orange;
+$button-color:          $charcoal;
+
 .button {
     position: absolute;
-    display: inline-block;
     height: remCalc(70);
     width: remCalc(170);
-    left: remCalc(80);
     bottom: 0;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    padding: 0.25em 0.5em 0.3em 0.5em;
+    left: remCalc(80);
+    background-color: $button-bg-color;
+    border: remCalc(1) solid $button-border-color;
+    display: inline-block;
     cursor: pointer;
-    border: remCalc(1) solid #999999;
-    border-color: #f0cb11;
-    text-shadow: remCalc(1) remCalc(1) remCalc(3) rgba(0,0,0,0.5);
-    box-shadow: remCalc(0) remCalc(0) remCalc(10) remCalc(2) rgba(0,0,0,0.25);
-    background-color: rgba(255,229,0,0.75);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 35%, from(rgba(255, 135, 0, 1)), to(rgba(255, 237, 96, 0.5)));
-    z-index: 10;
+    color: $button-color;
+    font-size: remCalc(16);
+    font-style: italic;
+    padding: remCalc(25) remCalc(24);
+    text-decoration: none;
+    -webkit-text-shadow: 0px remCalc(1) 0px $button-text-shadow;
+       -moz-text-shadow: 0px remCalc(1) 0px $button-text-shadow;
+            text-shadow: 0px remCalc(1) 0px $button-text-shadow;
+    -webkit-box-shadow: 0px 0px remCalc(10) remCalc(2) rgba(0,0,0,0.25);;
+       -moz-box-shadow: 0px 0px remCalc(10) remCalc(2) rgba(0,0,0,0.25);;
+            box-shadow: 0px 0px remCalc(10) remCalc(2) rgba(0,0,0,0.25);;
+    background: -webkit-linear-gradient(top, $button-grad-start 5%, $button-grad-stop 100%);
+       background: -moz-linear-gradient(top, $button-grad-start 5%, $button-grad-stop 100%);
+        background: -ms-linear-gradient(top, $button-grad-start 5%, $button-grad-stop 100%);
+         background: -o-linear-gradient(top, $button-grad-start 5%, $button-grad-stop 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $button-grad-start), color-stop(1, $button-grad-stop));
+    background: linear-gradient(to bottom, $button-grad-start 5%, $button-grad-stop 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$button-grad-start', endColorstr='$button-grad-stop',GradientType=0);
+    &:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $button-grad-stop), color-stop(1, $button-grad-start));
+        background: -moz-linear-gradient(top, $button-grad-stop 5%, $button-grad-start 100%);
+        background: -webkit-linear-gradient(top, $button-grad-stop 5%, $button-grad-start 100%);
+        background: -o-linear-gradient(top, $button-grad-stop 5%, $button-grad-start 100%);
+        background: -ms-linear-gradient(top, $button-grad-stop 5%, $button-grad-start 100%);
+        background: linear-gradient(to bottom, $button-grad-stop 5%, $button-grad-start 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$button-grad-stop', endColorstr='$button-grad-start',GradientType=0);
+        background-color:$button-grad-stop;
+    }
     span {
         white-space: nowrap;
         @include center-align;
