@@ -1,15 +1,21 @@
 .absolute {
-	position: absolute;
+	position: absolute !important;
 }
 .fixed {
-	position: fixed;
+	position: fixed !important;
 }
 .relative {
-	position: relative;
+	position: relative !important;
 }
 .overflow-hidden {
 	overflow: hidden;
 }
 .center-align {
 	@include center-align;
+}
+.center-vertical {
+	@include vertical-align;
+}
+.center-horizontal {
+	@include horizontal-align;
 }

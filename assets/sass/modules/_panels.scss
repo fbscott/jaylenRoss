@@ -31,8 +31,8 @@ $panel-margin-top: 150;
 	}
 	span {
 		&.letter-spacing-0 {
-			// letter-spacing: 0;
-			margin-right: remCalc(-16);
+			letter-spacing: 0;
+			margin-right: remCalc(-36);
 		}
 	}
 }

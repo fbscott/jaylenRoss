@@ -11,6 +11,7 @@ $panel-border-color: lighten($primary-color, 50%);
 	position: absolute;
 	left: 50%;
   white-space: nowrap;
+  // padding-left: remCalc(16);
   -webkit-transform: translateX(-50%) scale(0.566667, 1);
   		-ms-transform: translateX(-50%) scale(0.566667, 1);
   				transform: translateX(-50%) scale(0.566667, 1);
