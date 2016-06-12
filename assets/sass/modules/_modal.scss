@@ -15,11 +15,11 @@
 	  border: 1px solid $see;
 	  z-index: 100;
 	  overflow-x: hidden;
-	  overflow-y: scroll;
+	  // overflow-y: scroll;
 	  box-shadow: 0px 0px remCalc(40) 0px rgba(0,0,0,0.5);
-	  &::-webkit-scrollbar {
-	  	display: none;
-	  }
+	  // &::-webkit-scrollbar {
+	  // 	display: none;
+	  // }
 	  @include center-align($position: fixed,
 	                        $orientation: "",
 	                        $top: 50%,
