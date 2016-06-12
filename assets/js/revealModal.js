@@ -10,9 +10,9 @@ var modalBack 	 = $('.js-back'),
 		// revealed modal
 		modal 			 = '',
 		// close link and/or icon
-		modalClose 	 = $('.js-modal-close'),
+		modalClose 	 = $('.js-modal-close');
 		// body
-		body 				 = $(document.body);
+		// body 				 = $(document.body);
 
 /**
  * Fade modal elems on click
@@ -25,7 +25,7 @@ modalTrigger.on('click', function() {
 
 	revealModal(_thisDataAttr);
 	// Prevent body from scrolling when modal is open
-	body.css('overflow', 'hidden');
+	// body.css('overflow', 'hidden');
 	console.log(_this);
 });
 
@@ -34,7 +34,7 @@ modalClose.on('click', function() {
 	var _elems = [$(modal), modalBack];
 
 	// Prevent body from scrolling when modal is open
-	body.css('overflow-y', 'auto');
+	// body.css('overflow-y', 'auto');
 	fadeEachOut(_elems);
 });
 

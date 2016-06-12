@@ -38,8 +38,8 @@ function panelHeight(accent) {
             $(_ctaButtonParent).css('margin-top', -1 * (_contentPanelHeight - accentPanelMargin) + 'px');
         }
 
-        console.log(accentPanel[i]);
-        console.log(_ctaButton);
-        console.log(_ctaButtonHeight);
+        // console.log(accentPanel[i]);
+        // console.log(_ctaButton);
+        // console.log(_ctaButtonHeight);
     }
  }
