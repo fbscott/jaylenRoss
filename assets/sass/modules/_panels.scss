@@ -139,11 +139,12 @@ $panel-margin-top: 150;
 		@extend %inner-panel;
 		@extend %inner-content;
 		z-index: 20;
-		p {
-			&:first-of-type {
-				margin-top: remCalc(176);
-			}
-		}
+		// Use for two-line book title
+		// p {
+		// 	&:first-of-type {
+		// 		margin-top: remCalc(176);
+		// 	}
+		// }
 	}
 	div.panel-image {
 		margin-top: remCalc(176);
