@@ -122,7 +122,7 @@ $panel-margin-top: 150;
 		z-index: 20;
 	}
 	div.panel-image {
-		margin-top: remCalc(128);
+		margin-top: remCalc(144);
 		left: 0;
 	}
 }
@@ -147,7 +147,7 @@ $panel-margin-top: 150;
 		// }
 	}
 	div.panel-image {
-		margin-top: remCalc(176);
+		margin-top: remCalc(144);
 		right: 0;
 	}
 }
@@ -208,7 +208,7 @@ $panel-margin-top: 150;
 	.panel-book-2 {
 		@extend %inner-panel;
 		div.panel-image {
-			margin-right: remCalc(-15);
+			margin-right: remCalc(30);
 		}
 	}
 }
