@@ -9,7 +9,11 @@ $panel-book-2-accent-color: #7e0000;
 $panel-text-bg-color: $background-color-primary;
 
 // mod-specific var margins
-$panel-margin-top: 150;
+$panel-margin-top: 75;
+
+%outer-panel {
+	margin-top: remCalc($panel-margin-top);
+}
 
 %inner-panel {
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
@@ -43,8 +47,9 @@ $panel-margin-top: 150;
 	background-color: $panel-solo-bg-color;
 	box-shadow: 0px 0px remCalc(20) 0px rgba(0,0,0,0.5);
 	&:last-of-type {
+		// here
 		margin-top: remCalc($panel-margin-top);
-		margin-bottom: remCalc($panel-margin-top);
+		margin-bottom: remCalc(150);
 		h2 {
 			top: remCalc(24);
 		}
@@ -90,11 +95,10 @@ $panel-margin-top: 150;
 }
 
 .panel-author {
+	@extend %outer-panel;
 	div.panel-accent {
 		@extend %inner-panel;
-		margin-top: remCalc($panel-margin-top + 42);
 		background-color: $panel-author-accent-color;
-		// z-index: -2;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -109,11 +113,10 @@ $panel-margin-top: 150;
 }
 
 .panel-book-1 {
+	@extend %outer-panel;
 	div.panel-accent {
 		@extend %inner-panel;
-		margin-top: remCalc($panel-margin-top);
 		background-color: $panel-book-1-accent-color;
-		// z-index: -2;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -128,11 +131,10 @@ $panel-margin-top: 150;
 }
 
 .panel-book-2 {
+	@extend %outer-panel;
 	div.panel-accent {
 		@extend %inner-panel;
-		margin-top: remCalc($panel-margin-top + 42);
 		background-color: $panel-book-2-accent-color;
-		// z-index: -2;
 		@include opacity(0.9);
 	}
 	div.panel-text {
@@ -153,6 +155,13 @@ $panel-margin-top: 150;
 }
 
 @media screen and (min-width: 460px) {
+	.panel-author,
+	.panel-book-1,
+	.panel-book-2,
+	.panel-solo:last-of-type {
+		margin-top: remCalc(150);	
+	}
+
 	.panel-book-1 {
 		div.panel-image {
 			margin-top: remCalc(56);

@@ -26,6 +26,8 @@ function panelHeight(accent) {
 
         // set .js-accent-panel height to tha of .js-content-panel
         $(accentPanel[i]).height(_contentPanelHeight);
+        // Add margin-top to aid with equal spacing between panels
+        $(accentPanel[i]).css('margin-top', (accentPanelMargin) + 'px');
 
         // alternate positive/negative margin-top
         if(i % 2 === 0) {
@@ -36,10 +38,8 @@ function panelHeight(accent) {
             // apply neg margin to .js-contetn-panel
             $(_contentPanel).css('margin-top', -1 * (_contentPanelHeight - accentPanelMargin) + 'px');
             $(_ctaButtonParent).css('margin-top', -1 * (_contentPanelHeight - accentPanelMargin) + 'px');
+            // Same as line 30 above, but accounting for the button height
+            $(accentPanel[i]).css('margin-top', (_ctaButtonHeight - accentPanelMargin) + 'px');
         }
-
-        // console.log(accentPanel[i]);
-        // console.log(_ctaButton);
-        // console.log(_ctaButtonHeight);
     }
  }
